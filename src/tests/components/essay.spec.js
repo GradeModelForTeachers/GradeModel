@@ -7,7 +7,6 @@ afterEach(cleanup)
 
 test('can render with redux with defaults', () => {
   const {getByTestId, fetchEssay} = renderWithRedux(<Essay />)
-   fireEvent.componentDidMount
   expect(getByTestId('essay_text').textContent).toBe('Loading Essay')
   expect(getByTestId('essay_title').textContent).toBe('')
 })
