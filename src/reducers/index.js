@@ -1,8 +1,8 @@
 import {combineReducers } from 'redux';
-import EssayTextReducer from './essay_text';
+import EssayReducer from './essay';
 
 const rootReducer = combineReducers({
-  essayText: EssayTextReducer,
+  essay: EssayReducer,
 });
 
 export default rootReducer;
