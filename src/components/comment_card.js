@@ -3,8 +3,8 @@ import CommentTextBox from './comment_text_box'
 import CommentDropDown from './comment_dropdown'
 
 export default class CommentCard extends Component{
-  constructor(props){
-    super(props)
+  constructor(){
+    super()
   }
 
   handleSelectionChange(event){
