@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import CommentTextBox from './comment_text_box'
 
 export default class CommentCard extends Component{
-  constructor(props){
-    super(props)
+  constructor(){
+    super()
   }
 
   render(){
