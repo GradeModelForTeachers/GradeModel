@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CommentDropDown from './comment_dropdown';
-import closeIcon from '../assets/icons/close-icon.png';
+import CommentDropDown from './comment_dropdown'
+
 
 export default class CommentTextBox extends Component {
   constructor(props) {

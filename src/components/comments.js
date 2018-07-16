@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import CommentTexrBox from './comment_text_box';
-import plusIcon from '../assets/icons/plus-icon.png';
-import CommentCard from './comment_card';
-
-const NUMBEROFCOMMENTSALLOWED = 6;
-const commentTypleCollection = ['Thesis', 'Thesis', 'Argument'];
+import CommentTexrBox from './comment_text_box'
+import CommentCard from './comment_card'
+const NUMBEROFCOMMENTSALLOWED = 6
+let commentTypleCollection = ["Thesis", "Thesis", "Argument"]
 
 export default class Comments extends Component {
   constructor() {

@@ -5,16 +5,18 @@ import {bindActionCreators} from 'redux';
 import {fetchEssay} from '../actions/index';
 
 export class Essay extends Component {
-  
+  constructor(props){
+    super (props);
+  }
+
 componentDidMount(){
   this.props.fetchEssay()
 }
   render() {
-    console.log(this.props.essay.essayText);
     return (
     <div className='col-md-9 essay'>
       <h2 data-testid="essay_title" className="essay-title">
-      {this.props.essay.essayTtile}
+      {this.props.essay.essayTitle}
       </h2>
       <div data-testid="essay_text" className ='essay-text'>
         {this.props.essay.essayText}

@@ -51,6 +51,7 @@
     "react-stickynode": "^1.4.0",
     "react-tooltip": "^3.4.0",
     "redux": "^3.0.4",
+    "redux-promise": "^0.6.0",
     "redux-promise-middleware": "^5.1.1"
   }
 }
