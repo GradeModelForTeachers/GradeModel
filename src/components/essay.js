@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {fetchEssay} from '../actions/index';
 
+
 export class Essay extends Component {
   constructor(props){
     super (props);
@@ -18,8 +19,7 @@ componentDidMount(){
       <h2 data-testid="essay_title" className="essay-title">
       {this.props.essay.essayTitle}
       </h2>
-      <div data-testid="essay_text" className ='essay-text'>
-        {this.props.essay.essayText}
+      <div data-testid="essay_text" className ='essay-text' dangerouslySetInnerHTML={{__html: this.props.essay.essayText}} >
       </div>
     </div>
     );
