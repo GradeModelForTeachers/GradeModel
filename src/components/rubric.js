@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Sticky from 'react-stickynode';
-import Modal from './modal'
+import RubricScores from './rubric_scores'
 export default class Rubric extends Component {
   constructor() {
     super();
@@ -66,26 +66,26 @@ export default class Rubric extends Component {
                     onMouseEnter={this.thesisToggleModal.bind(this)}
                     onMouseLeave={this.thesisToggleModal.bind(this)}>
                     {this.state.thesisDisplayText}
-                  <Modal
+                  <RubricScores
                     section="thesis"
                     show={this.state.thesisIsOpen}
                     handleScoreChange={this.handleScoreChange}
                     handleTextAndScoreChange={this.handleTextAndScoreChange}
                   >
-                  </Modal>
+                  </RubricScores>
                   </td>
                     <td className='Argument-section rubric-content-text'
                     onMouseEnter={this.evidenceToggleModal.bind(this)}
                     onMouseLeave={this.evidenceToggleModal.bind(this)}
                   >
                   {this.state.evidenceDisplayText}
-                  <Modal
+                  <RubricScores
                     section="evidence"
                     show={this.state.evidenceIsOpen}
                     handleScoreChange={this.handleScoreChange}
                     handleTextAndScoreChange={this.handleTextAndScoreChange}
                   >
-                  </Modal>
+                  </RubricScores>
                   </td>
                 </tr>
                 <tr>

@@ -3,7 +3,7 @@ import Essay from './essay';
 import Rubric from './rubric';
 import Comments from './comments';
 import Summary from './summary';
-import Modal from './modal';
+
 
 class Homepage extends Component {
   constructor() {
