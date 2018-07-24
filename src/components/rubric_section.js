@@ -14,6 +14,14 @@ export default class RubricSection extends Component {
     });
   }
 
+  displayRubricScoreAndCriteria(){
+    let scores = []
+    for (var score of this.props.score) {
+      scores.push( <td className='rubric-section'> {Object.values(score)}</td>)
+    }
+    return scores;
+  }
+
   render() {
     return (
       <div className="rubric-container">
@@ -102,14 +110,7 @@ export default class RubricSection extends Component {
         </tr>
 
         <tr>
-          <td className='rubric-section'> {Object.values(this.props.score[0])}</td>
-          <td className='rubric-section'> {Object.values(this.props.score[1])} </td>
-          <td className='rubric-section'> {Object.values(this.props.score[2])}</td>
-          <td className = 'rubric-section'>{Object.values(this.props.score[3])}</td>
-          <td className='rubric-section'> {Object.values(this.props.score[4])}</td>
-          <td className='rubric-section'> {Object.values(this.props.score[5])} </td>
-          <td className='rubric-section'> {Object.values(this.props.score[6])}</td>
-          <td className = 'rubric-section'>{Object.values(this.props.score[7])}</td>
+        {this.displayRubricScoreAndCriteria()}
         </tr>
         </table>
       </div>
