@@ -2,6 +2,9 @@ export const FETCH_ESSAY = 'FETCH_ESSAY'
 import mockEssay from '../tests/mock_data/essay_mock.json'
 export const FETCH_RUBRIC = 'FETCH_RUBRIC'
 import mockRubric from '../tests/mock_data/rubric_mock.json'
+export const FETCH_SUMMARY = 'FETCH_SUMMARY'
+import mockSummary from '../tests/mock_data/summary_mock.json'
+
 
 export function fetchEssay() {
   return {
@@ -17,6 +20,15 @@ export function fetchRubric() {
     type: FETCH_RUBRIC,
     payload:{
        "data": {...mockRubric}
+     }
+  };
+}
+
+export function fetchSummary() {
+  return {
+    type: FETCH_SUMMARY,
+    payload:{
+       "data": {...mockSummary}
      }
   };
 }

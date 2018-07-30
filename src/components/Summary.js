@@ -1,26 +1,40 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {fetchSummary} from '../actions/index';
 
-export default class Summary extends Component {
+export class Summary extends Component {
+  constructor(props){
+    super (props);
+  }
+
+  componentDidMount(){
+      this.props.fetchSummary()
+  }
+
   render() {
-    return (
-      <span className=" summary col-md-6 col-md-offset-3">
-        <div>
-          <h2 className="summary-title">
-SUMMARY
-          </h2>
-          <ul>
-            <li>
-Golding uses the actions and dialogue of the characters to create her commentary of humans are unable to act violent towards another, but can only change his or her nature as a result of the environment.
-            </li>
-            <li>
-Golding uses the actions of Jack when becoming a hunter during, and after hunting for pigs to show Golding commentary of humans are unable to act violent towards another, but can only change their nature as a result of the environment.
-            </li>
-            <li>
-In addition to Jack actions when hunting, Golding also uses the dialogue between in Piggy and Ralph's argument to show Golding commentary of humans are unable to act violent towards another, but can only change their nature as a result of the environment.
-            </li>
-          </ul>
-        </div>
-      </span>
-    );
+      return (
+        <span className=' summary col-md-6 col-md-offset-3'>
+          <div>
+            <h2 className='summary-title'>SUMMARY</h2>
+            {Object.keys(this.props.summary).length == 0 ? null :
+                <ul data-testid="summary">
+                  {this.props.summary.map(function(item){
+                    return <li key={item}>{item}</li>
+                  })}
+                </ul>
+            }
+          </div>
+        </span>
+      );
   }
 }
+
+function mapStateToProps({summary}){
+  return {summary};
+}
+
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({fetchSummary}, dispatch);
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Summary);
