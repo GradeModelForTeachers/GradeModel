@@ -11,7 +11,7 @@
   },
   "jest": {
     "verbose": true,
-    "testUrl": "http://localhost/"
+    "testURL": "http://localhost/"
   },
   "author": "",
   "license": "ISC",
