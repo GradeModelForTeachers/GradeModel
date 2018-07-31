@@ -9,6 +9,10 @@
     "test": "jest",
     "test:watch": "npm run test -- --watch"
   },
+  "jest": {
+    "verbose": true,
+    "testUrl": "http://localhost/"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
