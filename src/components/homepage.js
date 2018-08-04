@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Essay from './essay';
 import Rubric from './rubric';
-import Comments from './comments';
+import Comments from '../containers/comments';
 import Summary from './summary';
 
 

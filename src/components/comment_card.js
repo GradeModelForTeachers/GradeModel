@@ -1,25 +1,39 @@
 import React, { Component } from 'react';
-import CommentTextBox from './comment_text_box';
+import CommentTextBox from './comment_text_box'
+import CommentDropDown from './comment_dropdown'
 
-export default class CommentCard extends Component {
-  render() {
-    return (
-      <div className={`input-comment-container ${this.props.commentType}-section`}>
-        <button
-          type="submit"
-          className="delete-comment-button"
-          onClick={this.props.handleDeleteComment}
-        >
-          {' '}
-Remove
-        </button>
-        <h4 className="comment-type">
-          {this.props.commentType}
-        </h4>
-        <CommentTextBox
+export default class CommentCard extends Component{
+  constructor(){
+    super()
+  }
+
+  handleSelectionChange(event){
+    this.setState({
+        inputValue: event.target.value,
+        count: this.state.count + 1
+    })
+  }
+
+  render(){
+    return (this.props.commentSuggestions === undefined ? null :
+        <div className= {`input-comment-container ${this.props.commentType}-section`}>
+          <button  className="delete-comment-button"
+          onClick= {this.props.handleDeleteComment}> Remove
+          </button>
+          <h4 data-testid="comment-type"className='comment-type'>{this.props.commentType}</h4>
+          <CommentTextBox
           value={this.props.commentValue}
-        />
-      </div>
-    );
+          />
+          <div>
+            <CommentDropDown
+              text={""}
+              option1={this.props.commentSuggestions[0]}
+              option2={this.props.commentSuggestions[1]}
+              option3={this.props.commentSuggestions[2]}
+              handleSelectionChange={this.handleSelectionChange.bind(this)}
+              />
+          </div>
+        </div>
+      );
   }
 }

@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import CommentTexrBox from './comment_text_box'
-import CommentCard from './comment_card'
+import CommentTexrBox from '../components/comment_text_box'
+import CommentCard from '../components/comment_card'
 const NUMBEROFCOMMENTSALLOWED = 6
 let commentTypleCollection = ["Thesis", "Thesis", "Argument"]
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {fetchComments} from '../actions/index';
 
-export default class Comments extends Component {
+export  class Comments extends Component {
   constructor() {
     super();
     this.state = {
@@ -15,8 +18,12 @@ export default class Comments extends Component {
     this.handleDeleteComment = this.handleDeleteComment.bind(this);
   }
 
-  handleNewCommentSelection(e) {
-    if (e.target.value === '') {
+  componentDidMount(){
+    this.props.fetchComments()
+  }
+
+  handleNewCommentSelection(e){
+    if (e.target.value === ""){
       this.setState({
         buttonDisabled: true,
       });
@@ -54,6 +61,7 @@ export default class Comments extends Component {
   }
 
   render() {
+<<<<<<< HEAD:src/components/comments.js
     return (
       <div className="comments col-md-3">
         {this.state.commentKeys.includes(1)
@@ -87,6 +95,44 @@ export default class Comments extends Component {
             />
           )
           : null
+=======
+  let commentTexts = Object.keys(this.props.listOfComments).length == 0 ? null :
+  this.props.listOfComments.map(comment =>comment.commentText)
+  let commentTypes = Object.keys(this.props.listOfComments).length == 0 ? null :
+  this.props.listOfComments.map(comment =>comment.commentType)
+  let commentSuggestions = Object.keys(this.props.listOfComments).length == 0 ? null :
+  this.props.listOfComments.map(comment =>comment.commentSuggestions)
+  return (commentTexts === null  ? null :
+      <div className='comments col-md-3'>
+        {this.state.commentKeys.includes(1) ?
+        <CommentCard
+           handleDeleteComment={this.handleDeleteComment.bind(this,1)}
+           commentType={commentTypes[0]}
+           commentValue={commentTexts[0]}
+           commentSuggestions={commentSuggestions[0]}
+        />
+        :null
+      }
+
+      {this.state.commentKeys.includes(2) ?
+        <CommentCard
+           handleDeleteComment={this.handleDeleteComment.bind(this,2)}
+           commentType={commentTypes[1]}
+           commentValue={commentTexts[1]}
+           commentSuggestions={commentSuggestions[1]}
+        />
+        : null
+      }
+
+      {this.state.commentKeys.includes(3) ?
+        <CommentCard
+           handleDeleteComment={this.handleDeleteComment.bind(this,3)}
+           commentType={commentTypes[2]}
+           commentValue={commentTexts[2]}
+           commentSuggestions={commentSuggestions[1]}
+        />
+        : null
+>>>>>>> adds comments to redux and refactors co;comment flow:src/containers/comments.js
       }
 
         {this.state.commentKeys.includes(4)
@@ -150,3 +196,11 @@ Argument Comment
     );
   }
 }
+
+function mapStateToProps({listOfComments}){
+  return {listOfComments};
+}
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({fetchComments}, dispatch);
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Comments);
