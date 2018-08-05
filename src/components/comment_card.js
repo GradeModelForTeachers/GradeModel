@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import CommentTextBox from './comment_text_box';
 
 export default class CommentCard extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className={`input-comment-container ${this.props.commentType}-section`}>

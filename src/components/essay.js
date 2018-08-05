@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import Highlighter from 'react-highlight-words';
 
 export default class Essay extends Component {
-  constructor() {
-    super();
-  }
 
   render() {
     return (
