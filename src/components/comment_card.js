@@ -10,6 +10,7 @@ export default class CommentCard extends Component {
     return (
       <div className={`input-comment-container ${this.props.commentType}-section`}>
         <button
+          type="submit"
           className="delete-comment-button"
           onClick={this.props.handleDeleteComment}
         >
