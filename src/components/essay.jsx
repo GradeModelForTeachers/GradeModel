@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Highlighter from 'react-highlight-words';
 
 export default class Essay extends Component {
-
   render() {
     return (
       <div className="col-md-9 essay">
