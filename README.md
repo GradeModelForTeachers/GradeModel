@@ -17,3 +17,8 @@ GradeModel is an open source tool designed to make grading easier for writing te
 
 ## How To Run The Application
  - ``npm start`` inside the Grademodel folder
+
+## CI/CD
+- We are using the free version of [CircleCI](https://circleci.com/gh/GradeModelForTeachers/) for our pipelines
+  - Use the GradeModel credentials to login and see the jobs running
+- Changes can be made to the CircleCI configuration [here](./.circleci/config.yml)
