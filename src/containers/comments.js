@@ -61,41 +61,6 @@ export  class Comments extends Component {
   }
 
   render() {
-<<<<<<< HEAD:src/components/comments.js
-    return (
-      <div className="comments col-md-3">
-        {this.state.commentKeys.includes(1)
-          ? (
-            <CommentCard
-              handleDeleteComment={this.handleDeleteComment.bind(this, 1)}
-              commentType="Thesis"
-              commentValue="Great imagary"
-            />
-          )
-          : null
-      }
-
-        {this.state.commentKeys.includes(2)
-          ? (
-            <CommentCard
-              handleDeleteComment={this.handleDeleteComment.bind(this, 2)}
-              commentType="Thesis"
-              commentValue="Perfect"
-            />
-          )
-          : null
-      }
-
-        {this.state.commentKeys.includes(3)
-          ? (
-            <CommentCard
-              handleDeleteComment={this.handleDeleteComment.bind(this, 3)}
-              commentType="Argument"
-              commentValue="Does this go with the rest of the essay?"
-            />
-          )
-          : null
-=======
   let commentTexts = Object.keys(this.props.listOfComments).length == 0 ? null :
   this.props.listOfComments.map(comment =>comment.commentText)
   let commentTypes = Object.keys(this.props.listOfComments).length == 0 ? null :
@@ -132,36 +97,32 @@ export  class Comments extends Component {
            commentSuggestions={commentSuggestions[1]}
         />
         : null
->>>>>>> adds comments to redux and refactors co;comment flow:src/containers/comments.js
       }
 
-        {this.state.commentKeys.includes(4)
-          ? (
-            <CommentCard
-              commentType={commentTypleCollection[4]}
-              handleDeleteComment={this.handleDeleteComment.bind(this, 4)}
-              commentValue=""
-            />
-          ) : null
+      {this.state.commentKeys.includes(4) ?
+        <CommentCard
+          commentType={commentTypleCollection[4]}
+          handleDeleteComment={this.handleDeleteComment.bind(this,4)}
+          commentValue={""}
+          commentSuggestions={commentSuggestions[1]}
+        /> : null
       }
 
-        {this.state.commentKeys.includes(5)
-          ? (
-            <CommentCard
-              commentType={commentTypleCollection[5]}
-              handleDeleteComment={this.handleDeleteComment.bind(this, 5)}
-              commentValue=""
-            />
-          ) : null
+      {this.state.commentKeys.includes(5) ?
+        <CommentCard
+          commentType={commentTypleCollection[5]}
+          handleDeleteComment={this.handleDeleteComment.bind(this,5)}
+          commentValue={""}
+          commentSuggestions={commentSuggestions[1]}
+        /> : null
       }
-        {this.state.commentKeys.includes(6)
-          ? (
-            <CommentCard
-              commentType={commentTypleCollection[6]}
-              handleDeleteComment={this.handleDeleteComment.bind(this, 6)}
-              commentValue=""
-            />
-          ) : null
+      {this.state.commentKeys.includes(6) ?
+        <CommentCard
+          commentType={commentTypleCollection[6]}
+          handleDeleteComment={this.handleDeleteComment.bind(this,6)}
+          commentValue={""}
+          commentSuggestions={commentSuggestions[1]}
+        /> : null
       }
         <span className="add-comment col-md-6">
           <button
