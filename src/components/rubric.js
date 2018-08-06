@@ -36,20 +36,16 @@ export default class Rubric extends Component {
   }
 
   handleTextAndScoreChange = (event) => {
-    switch(event.target.title){
-     case "thesis":
+    event.target.title === "thesis" ?
      this.setState({
        thesisScore: event.target.id,
        thesisDisplayText: event.target.value
-     });
-     case "evidence":
+     })
+     :
      this.setState({
        evidenceScore: event.target.id,
        evidenceDisplayText: event.target.value
-     });
-   default:
-   return null;
-    }
+     })
   }
     render() {
         return (
@@ -90,7 +86,7 @@ export default class Rubric extends Component {
                 </tr>
                 <tr>
                 <td className='rubric-number Thesis-section'>SCORE:  {this.state.thesisScore}</td>
-                <td className='rubric-number Argument-section'> SCORE:       {this.state.evidenceScore}</td>
+                <td className='rubric-number Argument-section'> SCORE:  {this.state.evidenceScore}</td>
                 </tr>
               </table>
             </Sticky>
