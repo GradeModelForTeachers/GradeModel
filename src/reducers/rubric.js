@@ -1,11 +1,11 @@
-import {FETCH_RUBRIC} from '../actions/index';
+import { FETCH_RUBRIC } from '../actions/index';
 
 export default (state = {}, action) => {
-  switch (action.type){
+  switch (action.type) {
     case FETCH_RUBRIC:
-      let data = action.payload.data.rubric_items
-      return data
+      const data = action.payload.data.rubric_items;
+      return data;
     default:
-      return state
+      return state;
   }
-}
+};
