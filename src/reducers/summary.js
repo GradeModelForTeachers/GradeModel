@@ -1,11 +1,11 @@
-import {FETCH_SUMMARY} from '../actions/index';
+import { FETCH_SUMMARY } from '../actions/index';
 
 export default (state = {}, action) => {
-  switch (action.type){
+  switch (action.type) {
     case FETCH_SUMMARY:
-      let data = action.payload.data.summary
-      return data
+      const data = action.payload.data.summary;
+      return data;
     default:
-      return state
+      return state;
   }
-}
+};
