@@ -17,7 +17,7 @@ class Homepage extends Component {
     this.onSubmitGrade = this.onSubmitGrade.bind(this);
   }
 
-  onSubmitGrade() {
+  onSubmitGrade = () => {
     window.alert('Thank You For Submitting Your Grade');
   }
 
