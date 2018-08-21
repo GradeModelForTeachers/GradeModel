@@ -7,6 +7,8 @@ import reduxPromise from 'redux-promise';
 import reducers from './reducers';
 const createStoreWithMiddleware = applyMiddleware(reduxPromise)(createStore);
 const store = createStoreWithMiddleware(reducers);
+import model from './model/grade_model';
+import * as tf from "@tensorflow/tfjs/dist/index";
 
 ReactDOM.render(
 <Provider store={store}>
@@ -14,3 +16,6 @@ ReactDOM.render(
 </Provider>,
   document.querySelector('.container-homepage')
 );
+
+console.log('Loading model...');
+model.createAndTrainModel();
