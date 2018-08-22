@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Summary from './summary';
 import RubricSection from './rubric_section';
 import { fetchRubric } from '../actions/index';
 import { getSectionScores } from '../utils/rubric_scores_helper';
@@ -26,11 +24,6 @@ class RubricScores extends Component {
     );
   }
 }
-RubricScores.propTypes = {
-  onMouseLeave: PropTypes.func.isRequired,
-  show: PropTypes.bool,
-  children: PropTypes.node,
-};
 
 function mapStateToProps({ rubric }) {
   return { rubric };
