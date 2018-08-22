@@ -9,11 +9,14 @@
       "react/destructuring-assignment":"off",
       "react/prop-types":"off",
       "react/button-has-type": "off",
-      "import/no-named-as-default":"off"
+      "import/no-named-as-default":"off",
+      "no-alert":"off",
+      "react/no-danger" : "off"
     },
     "env": {
         "browser": true,
-        "node": true
+        "node": true,
+        "jest":true
     }
 
 }

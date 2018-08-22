@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import CommentTexrBox from '../components/comment_text_box';
 import CommentCard from '../components/comment_card';
 import { fetchComments } from '../actions/index';
 
@@ -16,11 +15,38 @@ export class Comments extends Component {
       buttonDisabled: true,
       commentNumberToAdd: 4, // The next  comment we are going to add
     };
-    this.handleDeleteComment = this.handleDeleteComment.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchComments();
+  }
+
+
+  addToCommenetTypeCollection = (commentNumberToAdd, commentType) => {
+    commentTypleCollection[commentNumberToAdd] = commentType;
+  }
+
+  handleAddComment = (commentNumberToAdd) => {
+    const commentKeys = (prevState => [...prevState.commentKeys]);
+    let commentNumberToAddIncrease = 0;
+    commentKeys.push(commentNumberToAdd);
+    if (commentNumberToAdd < NUMBEROFCOMMENTSALLOWED) {
+      commentNumberToAddIncrease = commentNumberToAdd;
+      commentNumberToAddIncrease += 1;
+    }
+    this.setState({
+      commentNumberToAdd: commentNumberToAddIncrease,
+      commentKeys,
+    });
+  }
+
+  handleDeleteComment = (commentNumber) => {
+    const commentKeys = { ...prevState => ([...prevState.commentKeys]) };
+    const index = commentNumber - 1;
+    commentKeys.splice(index, 1);
+    this.setState({
+      commentKeys,
+    });
   }
 
   handleNewCommentSelection(e) {
@@ -36,37 +62,13 @@ export class Comments extends Component {
     }
   }
 
-  addToCommenetTypeCollection(commentNumberToAdd, commentType) {
-    commentTypleCollection[commentNumberToAdd] = commentType;
-  }
-
-  handleAddComment(commentNumberToAdd) {
-    const commentKeys = [...this.state.commentKeys];
-    commentKeys.push(commentNumberToAdd);
-    if (commentNumberToAdd < NUMBEROFCOMMENTSALLOWED) {
-      commentNumberToAdd += 1;
-    }
-    this.setState({
-      commentNumberToAdd,
-      commentKeys,
-    });
-  }
-
-  handleDeleteComment(commentNumber) {
-    const commentKeys = [...this.state.commentKeys];
-    const index = commentNumber - 1;
-    commentKeys.splice(index, 1);
-    this.setState({
-      commentKeys,
-    });
-  }
 
   render() {
-    const commentTexts = Object.keys(this.props.listOfComments).length == 0 ? null
+    const commentTexts = Object.keys(this.props.listOfComments).length === 0 ? null
       : this.props.listOfComments.map(comment => comment.commentText);
-    const commentTypes = Object.keys(this.props.listOfComments).length == 0 ? null
+    const commentTypes = Object.keys(this.props.listOfComments).length === 0 ? null
       : this.props.listOfComments.map(comment => comment.commentType);
-    const commentSuggestions = Object.keys(this.props.listOfComments).length == 0 ? null
+    const commentSuggestions = Object.keys(this.props.listOfComments).length === 0 ? null
       : this.props.listOfComments.map(comment => comment.commentSuggestions);
     return (commentTexts === null ? null
       : (
@@ -74,7 +76,7 @@ export class Comments extends Component {
           {this.state.commentKeys.includes(1)
             ? (
               <CommentCard
-                handleDeleteComment={this.handleDeleteComment.bind(this, 1)}
+                handleDeleteComment={() => this.handleDeleteComment(1)}
                 commentType={commentTypes[0]}
                 commentValue={commentTexts[0]}
                 commentSuggestions={commentSuggestions[0]}
@@ -86,7 +88,7 @@ export class Comments extends Component {
           {this.state.commentKeys.includes(2)
             ? (
               <CommentCard
-                handleDeleteComment={this.handleDeleteComment.bind(this, 2)}
+                handleDeleteComment={() => this.handleDeleteComment(2)}
                 commentType={commentTypes[1]}
                 commentValue={commentTexts[1]}
                 commentSuggestions={commentSuggestions[1]}
@@ -98,7 +100,7 @@ export class Comments extends Component {
           {this.state.commentKeys.includes(3)
             ? (
               <CommentCard
-                handleDeleteComment={this.handleDeleteComment.bind(this, 3)}
+                handleDeleteComment={() => this.handleDeleteComment(3)}
                 commentType={commentTypes[2]}
                 commentValue={commentTexts[2]}
                 commentSuggestions={commentSuggestions[1]}
@@ -111,7 +113,7 @@ export class Comments extends Component {
             ? (
               <CommentCard
                 commentType={commentTypleCollection[4]}
-                handleDeleteComment={this.handleDeleteComment.bind(this, 4)}
+                handleDeleteComment={() => this.handleDeleteComment(4)}
                 commentValue=""
                 commentSuggestions={commentSuggestions[1]}
               />
@@ -122,7 +124,7 @@ export class Comments extends Component {
             ? (
               <CommentCard
                 commentType={commentTypleCollection[5]}
-                handleDeleteComment={this.handleDeleteComment.bind(this, 5)}
+                handleDeleteComment={() => this.handleDeleteComment(5)}
                 commentValue=""
                 commentSuggestions={commentSuggestions[1]}
               />
@@ -132,7 +134,7 @@ export class Comments extends Component {
             ? (
               <CommentCard
                 commentType={commentTypleCollection[6]}
-                handleDeleteComment={this.handleDeleteComment.bind(this, 6)}
+                handleDeleteComment={() => this.handleDeleteComment(6)}
                 commentValue=""
                 commentSuggestions={commentSuggestions[1]}
               />

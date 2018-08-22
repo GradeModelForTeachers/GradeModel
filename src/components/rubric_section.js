@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Sticky from 'react-stickynode';
 
 export default class RubricSection extends Component {
   constructor() {
@@ -17,37 +16,39 @@ export default class RubricSection extends Component {
 
   displayRubricScoreAndCriteria() {
     const scores = [];
-    for (const score of this.props.score) {
-      scores.push(<td className="rubric-section">
-        {' '}
-        {Object.values(score)}
-      </td>);
-    }
+    this.props.score.forEach((score) => {
+      scores.push(
+        <td className="rubric-section">
+          {' '}
+          {Object.values(score)}
+        </td>,
+      );
+    });
     return scores;
   }
 
-  displaySEctionBoxesAndInputs() {
+  displaySectionBoxesAndInputs() {
     const sectionBoxesAndInput = [];
-    const iterator = this.props.score.keys();
-    for (const score of this.props.score) {
-      for (const key of iterator) {
-        const keyAsString = key.toString();
-        sectionBoxesAndInput.push(<td className="rubric-number rubric-section">
-          {key}
+    let index = 0;
+    this.props.score.forEach((score) => {
+      sectionBoxesAndInput.push(
+        <td className="rubric-number rubric-section">
+          {index}
           <input
-            checked={this.state.selectedOption === keyAsString}
+            checked={this.state.selectedOption === index.toString()}
             className="radio-section-button"
             type="radio"
-            value={keyAsString}
             onChange={this.props.handleTextAndScoreChange}
             onClick={this.handleSelectRadioButton.bind(this)}
             value={Object.values(score)}
             title={this.props.section}
-            id={keyAsString}
+            id={index.toString()}
           />
-                                  </td>);
-      }
-    }
+        </td>,
+      );
+      index += 1;
+    });
+
     return sectionBoxesAndInput;
   }
 
@@ -56,7 +57,7 @@ export default class RubricSection extends Component {
       <div className="rubric-container">
         <table className="col-md-12 rubric">
           <tr>
-            {this.displaySEctionBoxesAndInputs()}
+            {this.displaySectionBoxesAndInputs()}
           </tr>
           <tr>
             {this.displayRubricScoreAndCriteria()}

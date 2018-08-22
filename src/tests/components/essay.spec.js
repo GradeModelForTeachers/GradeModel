@@ -1,7 +1,7 @@
 import React from 'react';
-import { render, fireEvent, cleanup } from 'react-testing-library';
-import Essay from '../../components/essay.js';
-import { renderWithRedux } from '../test_helper.js';
+import { cleanup } from 'react-testing-library';
+import Essay from '../../components/essay';
+import { renderWithRedux } from '../test_helper';
 import mockEssayParsed from '../mock_data/essay_mock_parsed';
 
 afterEach(cleanup);
