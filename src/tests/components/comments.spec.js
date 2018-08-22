@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, cleanup } from 'react-testing-library';
+import { render, cleanup } from 'react-testing-library';
 import CommentTextBox from '../../components/comment_text_box';
 import CommentCard from '../../components/comment_card';
 import Comments from '../../containers/comments';

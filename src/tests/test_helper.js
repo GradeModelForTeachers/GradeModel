@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStore } from 'redux';
-import { Provider, connect } from 'react-redux';
+import { Provider } from 'react-redux';
 import { render } from 'react-testing-library';
 import reducers from '../reducers';
 

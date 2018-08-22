@@ -4,10 +4,6 @@ import { bindActionCreators } from 'redux';
 import { fetchSummary } from '../actions/index';
 
 export class Summary extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.fetchSummary();
   }
@@ -17,7 +13,7 @@ export class Summary extends Component {
       <span className=" summary col-md-6 col-md-offset-3">
         <div>
           <h2 className="summary-title">SUMMARY</h2>
-          {Object.keys(this.props.summary).length == 0 ? null
+          {Object.keys(this.props.summary).length === 0 ? null
             : (
               <ul data-testid="summary">
                 {this.props.summary.map(item => <li key={item}>{item}</li>)}
