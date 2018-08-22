@@ -10,8 +10,6 @@ class Homepage extends Component {
     super();
     this.state = {
       open: false,
-      commmentTypeBar: false,
-      commentType: '',
     };
     this.onToggleSummary = this.onToggleSummary.bind(this);
     this.onSubmitGrade = this.onSubmitGrade.bind(this);
@@ -22,7 +20,9 @@ class Homepage extends Component {
   }
 
   onToggleSummary() {
-    this.setState({ open: !this.state.open });
+    this.setState(
+      prevState => ({ open: !prevState.open }),
+    );
   }
 
   render() {

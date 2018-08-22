@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
-import Highlighter from 'react-highlight-words';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchEssay } from '../actions/index';
 
 
 export class Essay extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.fetchEssay();
   }
