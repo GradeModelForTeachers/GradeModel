@@ -16,7 +16,10 @@ GradeModel is an open source tool designed to make grading easier for writing te
 - React Testing Frameworks
 
 ## How To Run The Application
- - ``npm start`` inside the Grademodel folder
+ - ``yarn start`` inside the Grademodel folder
+
+ ## How To Test The Application
+  - ``yarn test`` inside the Grademodel folder
 
  ## How To Run ESLint
   - ``./node_modules/.bin/eslint src/`` inside the Grademodel folder
