@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import RubricSection from './rubric_section';
@@ -24,6 +25,25 @@ class RubricScores extends Component {
     );
   }
 }
+
+RubricScores.propTypes = {
+  fetchRubric: PropTypes.func.isRequired,
+  handleScoreChange: PropTypes.func,
+  handleRubricTextChange: PropTypes.func,
+  handleTextAndScoreChange: PropTypes.func.isRequired,
+  section: PropTypes.string.isRequired,
+  rubric: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+  show: PropTypes.bool.isRequired,
+};
+
+RubricScores.defaultProps = {
+  handleScoreChange: () => {},
+  handleRubricTextChange: () => {},
+  rubric: [],
+};
 
 function mapStateToProps({ rubric }) {
   return { rubric };
