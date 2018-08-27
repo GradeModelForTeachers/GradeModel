@@ -3,7 +3,7 @@ import { render, cleanup } from 'react-testing-library';
 import CommentTextBox from '../../components/comment_text_box';
 import CommentCard from '../../components/comment_card';
 import Comments from '../../containers/comments';
-import { renderWithRedux } from '../test_helper';
+import renderWithRedux from '../test_helper';
 import mockComments from '../mock_data/comments_mock.json';
 
 afterEach(cleanup);

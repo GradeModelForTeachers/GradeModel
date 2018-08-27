@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { render } from 'react-testing-library';
 import reducers from '../reducers';
 
-export function renderWithRedux(
+export default function renderWithRedux(
   ui,
   { initialState, store = createStore(reducers, initialState) } = {},
 ) {
