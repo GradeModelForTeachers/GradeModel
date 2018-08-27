@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import CommentCard from '../components/comment_card';
@@ -174,6 +175,18 @@ Argument Comment
     );
   }
 }
+
+Comments.propTypes = {
+  fetchComments: PropTypes.func.isRequired,
+  listOfComments: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+};
+
+Comments.defaultProps = {
+  listOfComments: [],
+};
 
 function mapStateToProps({ listOfComments }) {
   return { listOfComments };
