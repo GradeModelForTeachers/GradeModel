@@ -10,7 +10,7 @@
       "react/no-danger" : "off",
       "react/forbid-prop-types": "off",
       "import/no-named-as-default": "off",
-      "import/no-unresolved": "off",
+      "import/no-unresolved": "off"
     },
     "env": {
         "browser": true,
