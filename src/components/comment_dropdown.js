@@ -1,27 +1,33 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class CommentDropDown extends Component {
-  render() {
-    return (
-      <select
-        onChange={this.props.handleSelectionChange}
-        className=" selectpicker select-comment"
-      >
-        <option value="">
-          {' '}
+const CommentDropDown = (props => (
+  <select
+    onChange={props.handleSelectionChange}
+    className=" selectpicker select-comment"
+  >
+    <option value="">
+      {' '}
 Select A Different Comment
-          {' '}
-        </option>
-        <option value={this.props.option1}>
-          {this.props.option1}
-        </option>
-        <option value={this.props.option2}>
-          {this.props.option2}
-        </option>
-        <option value={this.props.option3}>
-          {this.props.option3}
-        </option>
-      </select>
-    );
-  }
-}
+      {' '}
+    </option>
+    <option value={props.option1}>
+      {props.option1}
+    </option>
+    <option value={props.option2}>
+      {props.option2}
+    </option>
+    <option value={props.option3}>
+      {props.option3}
+    </option>
+  </select>
+)
+);
+CommentDropDown.propTypes = {
+  option1: PropTypes.string.isRequired,
+  option2: PropTypes.string.isRequired,
+  option3: PropTypes.string.isRequired,
+  handleSelectionChange: PropTypes.func.isRequired,
+};
+
+export default CommentDropDown;
