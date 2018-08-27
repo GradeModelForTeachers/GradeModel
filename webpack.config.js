@@ -1,24 +1,24 @@
 module.exports = {
   entry: [
-    './src/index.js'
+    './src/index.js',
   ],
   module: {
-   rules: [
-     {
-      test: /\.js$/,
-      exclude: /(node_modules)/,
-      use: {
-        loader: 'babel-loader',
-      }
-    }
-   ]
- },
- resolve: {
-   extensions: ['*', '.js', '.jsx',]
- },
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
+  },
   output: {
-    path: __dirname + '/dist',
+    path: `${__dirname}/dist`,
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
 };
