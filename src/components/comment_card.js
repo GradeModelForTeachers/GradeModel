@@ -48,8 +48,15 @@ Remove
 }
 
 CommentCard.propTypes = {
-  commentSuggestions: PropTypes.array.isRequired,
-  handleDeleteComment: PropTypes.func.isRequired,
-  commentValue: PropTypes.string.isRequired,
-  commentType: PropTypes.string.isRequired,
+  commentSuggestions: PropTypes.array,
+  handleDeleteComment: PropTypes,
+  commentValue: PropTypes.string,
+  commentType: PropTypes.string,
+};
+
+CommentCard.defaultProps = {
+  commentSuggestions: [],
+  handleDeleteComment: () => {},
+  commentValue: '',
+  commentType: '',
 };
