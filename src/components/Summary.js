@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchSummary } from '../actions/index';
@@ -25,6 +26,18 @@ export class Summary extends Component {
     );
   }
 }
+
+Summary.propTypes = {
+  fetchSummary: PropTypes.func.isRequired,
+  summary: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+  ]),
+};
+
+Summary.defaultProps = {
+  summary: [],
+};
 
 function mapStateToProps({ summary }) {
   return { summary };
