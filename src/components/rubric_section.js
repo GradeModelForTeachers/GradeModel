@@ -70,7 +70,7 @@ export default class RubricSection extends Component {
 }
 
 RubricSection.propTypes = {
-  score: PropTypes.number.isRequired,
+  score: PropTypes.array.isRequired,
   handleTextAndScoreChange: PropTypes.func.isRequired,
   section: PropTypes.string.isRequired,
 };
