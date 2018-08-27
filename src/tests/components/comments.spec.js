@@ -10,8 +10,8 @@ afterEach(cleanup);
 
 
 test('can render with mocked comment text', () => {
+/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "comments" }] */
   const comments = renderWithRedux(<Comments />);
-  const commentCard = render(<CommentCard />);
   const { getByTestId } = render(<CommentTextBox />);
   const commentTexts = mockComments.comments.map(comment => comment.commentText);
   expect(getByTestId('comment-text').textContent).toBe(commentTexts[0]);

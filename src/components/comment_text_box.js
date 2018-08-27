@@ -39,5 +39,9 @@ export default class CommentTextBox extends Component {
 }
 
 CommentTextBox.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.string,
+};
+
+CommentTextBox.defaultProps = {
+  value: '',
 };
