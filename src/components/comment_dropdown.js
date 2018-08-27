@@ -24,10 +24,16 @@ Select A Different Comment
 )
 );
 CommentDropDown.propTypes = {
-  option1: PropTypes.string.isRequired,
-  option2: PropTypes.string.isRequired,
-  option3: PropTypes.string.isRequired,
+  option1: PropTypes.string,
+  option2: PropTypes.string,
+  option3: PropTypes.string,
   handleSelectionChange: PropTypes.func.isRequired,
+};
+
+CommentDropDown.defaultProps = {
+  option1: '',
+  option2: '',
+  option3: '',
 };
 
 export default CommentDropDown;
