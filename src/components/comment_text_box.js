@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class CommentTextBox extends Component {
   constructor(props) {
@@ -36,3 +37,7 @@ export default class CommentTextBox extends Component {
     );
   }
 }
+
+CommentTextBox.propTypes = {
+  value: PropTypes.string.isRequired,
+};
