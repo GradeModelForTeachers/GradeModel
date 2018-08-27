@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchEssay } from '../actions/index';
@@ -20,6 +21,16 @@ export class Essay extends Component {
     );
   }
 }
+
+Essay.propTypes = {
+  fetchEssay: PropTypes.func.isRequired,
+  essay: PropTypes.object.isRequired,
+  essayTitle: PropTypes.string,
+};
+
+Essay.defaultProps = {
+  essayTitle: '',
+};
 
 function mapStateToProps({ essay }) {
   return { essay };
