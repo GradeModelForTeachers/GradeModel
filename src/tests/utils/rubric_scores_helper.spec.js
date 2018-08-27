@@ -1,4 +1,4 @@
-import { getSectionScores } from '../../utils/rubric_scores_helper';
+import getSectionScores from '../../utils/rubric_scores_helper';
 import mockRubric from '../mock_data/rubric_mock';
 
 

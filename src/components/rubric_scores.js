@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import RubricSection from './rubric_section';
 import { fetchRubric } from '../actions/index';
-import { getSectionScores } from '../utils/rubric_scores_helper';
+import getSectionScores from '../utils/rubric_scores_helper';
 
 class RubricScores extends Component {
   componentDidMount() {

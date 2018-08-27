@@ -49,7 +49,7 @@ Remove
 
 CommentCard.propTypes = {
   commentSuggestions: PropTypes.array,
-  handleDeleteComment: PropTypes,
+  handleDeleteComment: PropTypes.func,
   commentValue: PropTypes.string,
   commentType: PropTypes.string,
 };
