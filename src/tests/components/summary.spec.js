@@ -9,6 +9,5 @@ afterEach(cleanup);
 test('can render with summary text from mock data ', () => {
   const { getByTestId } = renderWithRedux(<Summary />);
 
-
   expect(getByTestId('summary').textContent).toBe(mockSummary.summary.join(''));
 });
