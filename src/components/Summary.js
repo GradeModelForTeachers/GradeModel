@@ -14,13 +14,13 @@ export class Summary extends Component {
       <span className=" summary col-md-6 col-md-offset-3">
         <div>
           <h2 className="summary-title">SUMMARY</h2>
-          {Object.keys(this.props.summary).length === 0 ? null
-            : (
-              <ul data-testid="summary">
-                {this.props.summary.map(item => <li key={item}>{item}</li>)}
-              </ul>
-            )
-            }
+          {Object.keys(this.props.summary).length === 0 ? null : (
+            <ul data-testid="summary">
+              {this.props.summary.map(item => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          )}
         </div>
       </span>
     );
@@ -29,10 +29,7 @@ export class Summary extends Component {
 
 Summary.propTypes = {
   fetchSummary: PropTypes.func.isRequired,
-  summary: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array,
-  ]),
+  summary: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 };
 
 Summary.defaultProps = {
@@ -46,4 +43,7 @@ function mapStateToProps({ summary }) {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchSummary }, dispatch);
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Summary);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Summary);
