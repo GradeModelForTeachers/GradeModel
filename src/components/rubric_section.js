@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class RubricSection extends Component {
   constructor() {
@@ -67,3 +68,9 @@ export default class RubricSection extends Component {
     );
   }
 }
+
+RubricSection.propTypes = {
+  score: PropTypes.number.isRequired,
+  handleTextAndScoreChange: PropTypes.func.isRequired,
+  section: PropTypes.string.isRequired,
+};
