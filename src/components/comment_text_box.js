@@ -10,6 +10,14 @@ export default class CommentTextBox extends Component {
     };
   }
 
+  componentWillMount= () => {
+    this.setState({ inputValue: this.props.value });
+  }
+
+  componentDidUpdate = () => {
+    this.setState({ inputValue: this.props.value });
+  }
+
   handleDeleteCommmentText() {
     this.setState({
       count: 0,
@@ -17,22 +25,17 @@ export default class CommentTextBox extends Component {
     });
   }
 
-  handleTextChange(e) {
-    this.setState(
-      prevState => ({
-        count: prevState.count + 1,
-        inputValue: e.target.value,
-      }),
-    );
+  handleTextChange(event) {
+    this.setState(prevState => ({
+      count: prevState.count + 1,
+    }));
+    this.setState({ inputValue: event.target.value });
   }
 
   render() {
     return (
       <div className="individual comment">
-        {this.state.count < 1
-          ? <textarea data-testid="comment-text" value={this.props.value} className="input-comment" onChange={this.handleTextChange.bind(this)} />
-          : <textarea value={this.state.inputValue} className="input-comment" onChange={this.handleTextChange.bind(this)} />
-              }
+        <textarea data-testid="comment-text" value={this.state.inputValue} className="input-comment" onChange={this.handleTextChange.bind(this)} />
       </div>
     );
   }

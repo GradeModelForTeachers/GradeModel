@@ -7,14 +7,12 @@ export default class CommentCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
+      commentValue: '',
     };
   }
 
-  handleSelectionChange() {
-    this.setState(
-      prevState => ({ count: prevState.count + 1 }),
-    );
+  handleSelectionChange = (event) => {
+    this.setState({ commentValue: event.target.value });
   }
 
   render() {
@@ -30,7 +28,7 @@ Remove
           </button>
           <h4 data-testid="comment-type" className="comment-type">{this.props.commentType}</h4>
           <CommentTextBox
-            value={this.props.commentValue}
+            value={this.state.commentValue === '' ? this.props.commentValue : this.state.commentValue}
           />
           <div>
             <CommentDropDown
