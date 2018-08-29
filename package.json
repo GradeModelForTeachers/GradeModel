@@ -6,7 +6,7 @@
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "test": "jest",
+    "test": "jest; npm run lint",
     "test:watch": "npm run test -- --watch",
     "lint": "yarn eslint && yarn stylelint 'style/*.css --fix'",
     "eslint": "eslint --ext .js,.jsx --fix ."
