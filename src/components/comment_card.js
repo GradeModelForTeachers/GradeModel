@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CommentTextBox from './comment_text_box';
 import CommentDropDown from './comment_dropdown';
-import '../styles/comment_card.css'
+import '../styles/comment_card.css';
 
 export default class CommentCard extends Component {
   constructor(props) {

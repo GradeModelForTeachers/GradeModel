@@ -13,7 +13,10 @@
   },
   "jest": {
     "verbose": true,
-    "testURL": "http://localhost/"
+    "testURL": "http://localhost/",
+    "moduleNameMapper":{
+      "\\.(css|less|sass|scss)$": "<rootDir>/config/css_stub.js"
+        }
   },
   "author": "",
   "license": "MIT",
