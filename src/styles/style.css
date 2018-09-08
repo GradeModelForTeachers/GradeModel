@@ -4,6 +4,7 @@
 @import 'comment_text_box.css';
 @import 'homepage.css';
 @import 'rubric_section.css';
+@import 'rubric.css';
 
 .body {
   height: 100%;
@@ -19,18 +20,9 @@
   margin-right: 20px;
 }
 
-
 .rubric-section-content {
   position: inline-block;
   padding-left: 100px;
-}
-
-.rubric-content-text {
-  font-size: 20px;
-}
-
-.rubric-title {
-  font-size: 32px;
 }
 
 .Thesis-highlighter {
@@ -106,22 +98,6 @@
   padding: 50;
 }
 
-.rubric-hovering-note {
-  font-weight: bolder;
-  font-size: 22px;
-  color: black;
-  border: 1px solid black;
-  background-color: white;
-  text-align: center;
-}
-
-.Thesis-section {
-  border: solid 8px #9400d3;
-}
-
-.Argument-section {
-  border: solid 8px orange;
-}
 
 .analysis-section {
   border: solid 8px #17a2b8;

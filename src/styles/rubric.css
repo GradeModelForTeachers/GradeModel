@@ -1,0 +1,30 @@
+.rubric-container {
+  position: relative;
+  z-index: 1;
+}
+.rubric-hovering-note {
+  font-weight: bolder;
+  font-size: 22px;
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+  text-align: center;
+}
+.rubric-title {
+  font-size: 32px;
+}
+.Thesis-section {
+  border: solid 8px #9400d3;
+}
+
+.Argument-section {
+  border: solid 8px orange;
+}
+.rubric-content-text {
+  font-size: 20px;
+}
+.rubric-number {
+  font-size: 40px;
+  font-weight: bold;
+  word-spacing: 30px;
+}
