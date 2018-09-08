@@ -22,50 +22,10 @@
   margin-right: 20px;
 }
 
-.rubric-section-content {
-  position: inline-block;
-  padding-left: 100px;
-}
-
 .Thesis-highlighter {
   background-color: #9400d3;
 }
 
 .Argument-highlighter {
   background-color: orange;
-}
-
-
-.submit-button {
-  margin-bottom: 20px;
-  padding-right: 10px;
-  font-size: 30px;
-  color: white;
-  background-color: #007bff;
-}
-
-.modal {
-  background-color: orange;
-  height: 300;
-  width: 200;
-  position: fixed;
-  font-size: 50px;
-}
-
-.modalBackdrop {
-  position: "fixed";
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: "rgba(0,0,0,0.3)";
-  padding: 50;
-}
-
-.analysis-section {
-  border: solid 8px #17a2b8;
-}
-
-.conclusion-section {
-  border: solid 8px brown;
 }
