@@ -1,0 +1,13 @@
+.essay {
+  margin-top: 10px;
+  border: 1px solid black;
+  margin-bottom: 50px;
+  background-color: white;
+}
+.essay-title {
+  margin-top: 20px;
+  text-align: center;
+}
+.essay-text {
+  font-size: 20px;
+}

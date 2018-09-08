@@ -1,3 +1,6 @@
+@import 'comment_card.css';
+@import 'essay.css';
+
 .body {
   height: 100%;
   background-color: lightGrey;
@@ -51,20 +54,6 @@
   font-size: 32px;
 }
 
-.essay {
-  margin-top: 10px;
-  border: 1px solid black;
-  margin-bottom: 50px;
-  background-color: white;
-}
-.essay-title {
-  margin-top: 20px;
-  text-align: center;
-}
-.essay-text {
-  font-size: 20px;
-}
-
 .Thesis-highlighter {
   background-color: #9400d3;
 }
@@ -110,15 +99,6 @@
   padding-top: 10px;
 }
 
-.input-comment-container {
-  height: 220px;
-  margin-bottom: 50px;
-  margin-top: 10px;
-  background-color: white;
-  margin-left: 60px;
-  border: 1px solid grey;
-  vertical-align: text-top;
-}
 .select-comment {
   margin-top: 10px;
   margin-bottom: 0px;
@@ -164,25 +144,7 @@
   width: 300px;
 }
 
-.delete-comment-button {
-  display: flex;
-  float: right;
-  margin-bottom: 0px;
-  margin-right: 20px;
-  margin-top: 10px;
-  background-color: #d9534f;
-  color: #fff;
-  font-size: 16px;
-  height: 35px;
-  position: relative;
-}
-.select-comment-type {
-  margin-top: 60px;
-  font-size: 20px;
-  width: 300px;
-  height: 36px;
-  float: right;
-}
+
 .modal {
   background-color: orange;
   height: 300;
