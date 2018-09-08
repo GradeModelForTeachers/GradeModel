@@ -36,26 +36,6 @@
 }
 
 
-.comments {
-  margin-top: 10px;
-  height: 100% important!;
-  margin-bottom: 10px;
-}
-
-.comment-type {
-  padding-left: 20px;
-  padding-top: 10px;
-}
-
-.comment-highlight {
-  display: inline-block;
-  list-style-type: none;
-  padding-right: 20px;
-  float: left;
-  width: 88px;
-  height: 64px;
-}
-
 .submit-button {
   margin-bottom: 20px;
   padding-right: 10px;
@@ -63,15 +43,6 @@
   color: white;
   background-color: #007bff;
 }
-
-.add-comment-button {
-  margin-top: 60px;
-  font-size: 22px;
-  background-color: #5cb85c;
-  color: #fff;
-  width: 300px;
-}
-
 
 .modal {
   background-color: orange;
