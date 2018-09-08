@@ -3,7 +3,7 @@ import Essay from './essay';
 import Rubric from './rubric';
 import Comments from '../containers/comments';
 import Summary from './summary';
-
+import '../styles/homepage.css';
 
 class Homepage extends Component {
   constructor() {
