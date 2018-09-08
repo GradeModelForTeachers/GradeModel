@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../styles/rubric_section.css';
 
 export default class RubricSection extends Component {
   constructor() {
@@ -33,7 +34,7 @@ export default class RubricSection extends Component {
     let index = 0;
     this.props.score.forEach((score) => {
       sectionBoxesAndInput.push(
-        <td className="rubric-number rubric-section">
+        <td className="rubric-number">
           {index}
           <input
             checked={this.state.selectedOption === index.toString()}

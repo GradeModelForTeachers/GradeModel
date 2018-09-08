@@ -1,0 +1,28 @@
+.rubric-container {
+  position: relative;
+  z-index: 1;
+}
+
+.rubric {
+  border: 1px solid black;
+  text-align: center;
+  background-color: white;
+  margin-bottom: 20px;
+}
+.rubric-section {
+  border-left: 1px solid black;
+  height: 50px;
+  width: 10%;
+  text-align: center;
+  padding: 15px;
+  vertical-align: text-top;
+  font-size: 20px;
+}
+.rubric-number {
+  font-size: 40px;
+  font-weight: bold;
+  word-spacing: 30px;
+}
+.radio-section-button {
+  margin-left: 30px;
+}
