@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import '../styles/comment_text_box.css';
 
 export default class CommentTextBox extends Component {
   constructor(props) {
@@ -34,7 +35,7 @@ export default class CommentTextBox extends Component {
 
   render() {
     return (
-      <div className="individual comment">
+      <div>
         <textarea data-testid="comment-text" value={this.state.inputValue} className="input-comment" onChange={this.handleTextChange.bind(this)} />
       </div>
     );

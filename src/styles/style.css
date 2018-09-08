@@ -1,6 +1,8 @@
 @import 'comment_card.css';
 @import 'essay.css';
-@import 'comment_dropdown'
+@import 'comment_dropdown.css';
+@import 'comment_text_box.css';
+
 .body {
   height: 100%;
   background-color: lightGrey;
@@ -83,15 +85,6 @@
   margin-top: 10px;
   height: 100% important!;
   margin-bottom: 10px;
-}
-
-.input-comment {
-  margin-top: 20px;
-  height: 90px;
-  width: 90%;
-  border: 1px solid black;
-  margin-left: 20px;
-  font-size: 20px;
 }
 
 .comment-type {
