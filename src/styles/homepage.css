@@ -1,0 +1,14 @@
+.add-comment {
+  display: flex;
+  float: right;
+}
+.summary-button {
+  margin-bottom: 20px;
+  padding-right: 10px;
+  background-color: #17a2b8;
+  font-size: 30px;
+  color: #fff;
+}
+.submit-essay {
+  float: right;
+}

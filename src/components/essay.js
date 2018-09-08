@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchEssay } from '../actions/index';
-
+import '../styles/essay.css';
 
 export class Essay extends Component {
   componentDidMount() {
