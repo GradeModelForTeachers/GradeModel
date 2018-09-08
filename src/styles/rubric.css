@@ -28,3 +28,10 @@
   font-weight: bold;
   word-spacing: 30px;
 }
+.modal {
+  background-color: orange;
+  height: 300;
+  width: 200;
+  position: fixed;
+  font-size: 50px;
+}

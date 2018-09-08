@@ -12,3 +12,10 @@
 .submit-essay {
   float: right;
 }
+.submit-button {
+  margin-bottom: 20px;
+  padding-right: 10px;
+  font-size: 30px;
+  color: white;
+  background-color: #007bff;
+}
