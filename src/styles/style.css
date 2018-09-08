@@ -5,6 +5,8 @@
 @import 'homepage.css';
 @import 'rubric_section.css';
 @import 'rubric.css';
+@import 'summary.css';
+@import 'comments.css';
 
 .body {
   height: 100%;
@@ -33,15 +35,6 @@
   background-color: orange;
 }
 
-.summary {
-  margin-bottom: 20px;
-  font-size: 20px;
-  border: 1px solid black;
-  background-color: white;
-}
-.summary-title {
-  text-align: center;
-}
 
 .comments {
   margin-top: 10px;
@@ -97,7 +90,6 @@
   background-color: "rgba(0,0,0,0.3)";
   padding: 50;
 }
-
 
 .analysis-section {
   border: solid 8px #17a2b8;

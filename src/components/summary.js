@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchSummary } from '../actions/index';
+import '../styles/summary.css';
 
 export class Summary extends Component {
   componentDidMount() {
