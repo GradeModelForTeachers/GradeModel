@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import CommentCard from '../components/comment_card';
 import { fetchComments } from '../actions/index';
+import '../styles/comments.css';
 
 const NUMBEROFCOMMENTSALLOWED = 6;
 const commentTypleCollection = ['Thesis', 'Thesis', 'Argument'];
@@ -151,7 +152,6 @@ Add Comment
             </button>
           </span>
           <select
-            className="select-comment-type"
             onMouseLeave={this.handleNewCommentSelection.bind(this)}
           >
             <option value="">
