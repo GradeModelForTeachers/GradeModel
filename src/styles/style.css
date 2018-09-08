@@ -3,6 +3,7 @@
 @import 'comment_dropdown.css';
 @import 'comment_text_box.css';
 @import 'homepage.css';
+@import 'rubric_section.css';
 
 .body {
   height: 100%;
@@ -17,26 +18,7 @@
   margin-left: 20px;
   margin-right: 20px;
 }
-.rubric-container {
-  position: relative;
-  z-index: 1;
-}
-.rubric {
-  border: 1px solid black;
-  text-align: center;
-  background-color: white;
-  margin-bottom: 20px;
-}
 
-.rubric-section {
-  border-left: 1px solid black;
-  height: 50px;
-  width: 10%;
-  text-align: center;
-  padding: 15px;
-  vertical-align: text-top;
-  font-size: 20px;
-}
 
 .rubric-section-content {
   position: inline-block;
@@ -45,12 +27,6 @@
 
 .rubric-content-text {
   font-size: 20px;
-}
-
-.rubric-number {
-  font-size: 40px;
-  font-weight: bold;
-  word-spacing: 30px;
 }
 
 .rubric-title {
@@ -128,9 +104,6 @@
   right: 0;
   background-color: "rgba(0,0,0,0.3)";
   padding: 50;
-}
-.radio-section-button {
-  margin-left: 30px;
 }
 
 .rubric-hovering-note {
