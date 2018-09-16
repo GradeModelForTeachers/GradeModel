@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Sticky from 'react-stickynode';
-import RubricScores from './rubric_scores';
+import RubricScores from '../containers/rubric_scores';
 import '../styles/rubric.css';
 
 export default class Rubric extends Component {

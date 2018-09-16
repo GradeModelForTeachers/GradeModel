@@ -1,6 +1,6 @@
 import React from 'react';
 import { cleanup } from 'react-testing-library';
-import Essay from '../../components/essay';
+import Essay from '../../containers/essay';
 import renderWithRedux from '../test_helper';
 import mockEssayParsed from '../mock_data/essay_mock_parsed';
 
