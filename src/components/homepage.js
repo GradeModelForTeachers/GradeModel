@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Essay from './essay';
+import Essay from '../containers/essay';
 import Rubric from './rubric';
 import Comments from '../containers/comments';
-import Summary from './summary';
+import Summary from '../containers/summary';
 import '../styles/homepage.css';
 
 class Homepage extends Component {
