@@ -1,6 +1,9 @@
-class Essay { // TODO: component name could be confusing
-  static fromEssayObject(essayObject) {
-    return new Essay(essayObject);
+import fs from 'fs';
+import path from 'path';
+
+class Essay {
+  static fromEssayObject(essayPath) {
+    return new Essay(essayPath);
   }
 
   buildBagOfWords() {
@@ -14,7 +17,9 @@ class Essay { // TODO: component name could be confusing
     return words;
   }
 
-  constructor(essayObject) {
+  constructor(essayPath) {
+    // const essayObject = JSON.parse(fs.readFileSync(essayPath, 'utf8'));
+    const essayObject = JSON.parse(fs.readFileSync(path.resolve(essayPath)));
     this.score = essayObject.score;
     this.essayText = essayObject.essay_text;
     this.bagOfWords = this.buildBagOfWords();
