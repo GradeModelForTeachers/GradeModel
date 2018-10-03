@@ -18,3 +18,8 @@ test('should build corpus of all words in all essays in collection', () => {
   const expectedCorpus = ['essay', 'text', 'second', 'sample', 'here'];
   expect(essayCollection.corpus).toEqual(expectedCorpus);
 });
+
+test('should vectorize single word as one-hot vector', () => {
+  const expectedVector = [0, 0, 0, 0, 1];
+  expect(essayCollection.buildOneHotVector('here')).toEqual(expectedVector);
+});

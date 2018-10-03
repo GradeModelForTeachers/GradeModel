@@ -24,6 +24,12 @@ class EssayCollection {
     }, {});
   }
 
+  buildOneHotVector(word) {
+    const oneHotVector = Array(...Array(this.corpus.length)).map(Number.prototype.valueOf, 0);
+    oneHotVector[this.corpus.indexOf(word)] = 1;
+    return oneHotVector;
+  }
+
   constructor(directory) {
     this.directory = directory;
     this.essays = this.storeEssays();
