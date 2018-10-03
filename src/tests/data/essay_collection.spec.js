@@ -7,7 +7,10 @@ test('should store all essays in collection', () => {
   expect(essayCollection.essays.length).toEqual(2);
 });
 
-// test('should build corpus of all words in all essays in collection', () => {
-//   const essayCollection = EssayCollection.fromDirectory(directory);
-//   expect(essayCollection.corpus).toEqual(['essay', 'text', 'second', 'sample', 'here']);
-// });
+test('should compute frequncies of all words in all essays in collection', () => {
+  const essayCollection = EssayCollection.fromDirectory(directory);
+  const expectedFrequencies = {
+    essay: 4, text: 3, second: 2, sample: 3, here: 1,
+  };
+  expect(essayCollection.wordFrequencies).toEqual(expectedFrequencies);
+});
