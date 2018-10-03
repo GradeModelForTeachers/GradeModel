@@ -28,6 +28,7 @@ class EssayCollection {
     this.directory = directory;
     this.essays = this.storeEssays();
     this.wordFrequencies = this.buildWordFrequencies();
+    this.corpus = Object.keys(this.wordFrequencies);
   }
 }
 
