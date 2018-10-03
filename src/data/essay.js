@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 
 class Essay {
-  static fromEssayObject(essayPath) {
-    return new Essay(essayPath);
+  static fromEssayObject(relativePath, essayFilename) {
+    return new Essay(relativePath, essayFilename);
   }
 
   buildBagOfWords() {
@@ -17,9 +17,8 @@ class Essay {
     return words;
   }
 
-  constructor(essayPath) {
-    // const essayObject = JSON.parse(fs.readFileSync(essayPath, 'utf8'));
-    const essayObject = JSON.parse(fs.readFileSync(path.resolve(essayPath)));
+  constructor(relativePath, essayFilename) {
+    const essayObject = JSON.parse(fs.readFileSync(path.resolve(relativePath, essayFilename)));
     this.score = essayObject.score;
     this.essayText = essayObject.essay_text;
     this.bagOfWords = this.buildBagOfWords();
