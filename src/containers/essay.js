@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { fetchEssay } from '../actions/index';
 import '../styles/essay.css';
 
@@ -35,7 +34,5 @@ Essay.defaultProps = {
 function mapStateToProps({ essay }) {
   return { essay };
 }
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchEssay }, dispatch);
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Essay);
+
+export default connect(mapStateToProps, { fetchEssay })(Essay);
