@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { fetchSummary } from '../actions/index';
 import '../styles/summary.css';
 
@@ -41,10 +40,4 @@ function mapStateToProps({ summary }) {
   return { summary };
 }
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchSummary }, dispatch);
-}
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Summary);
+export default connect(mapStateToProps, { fetchSummary })(Summary);

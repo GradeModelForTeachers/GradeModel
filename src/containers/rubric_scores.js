@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import RubricSection from '../components/rubric_section';
 import { fetchRubric } from '../actions/index';
 import getSectionScores from '../utils/rubric_scores_helper';
@@ -48,7 +47,5 @@ RubricScores.defaultProps = {
 function mapStateToProps({ rubric }) {
   return { rubric };
 }
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchRubric }, dispatch);
-}
-export default connect(mapStateToProps, mapDispatchToProps)(RubricScores);
+
+export default connect(mapStateToProps, { fetchRubric })(RubricScores);

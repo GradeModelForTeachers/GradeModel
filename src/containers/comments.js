@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import CommentCard from '../components/comment_card';
 import { fetchComments } from '../actions/index';
 import '../styles/comments.css';
@@ -191,7 +190,5 @@ Comments.defaultProps = {
 function mapStateToProps({ listOfComments }) {
   return { listOfComments };
 }
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchComments }, dispatch);
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Comments);
+
+export default connect(mapStateToProps, { fetchComments })(Comments);
