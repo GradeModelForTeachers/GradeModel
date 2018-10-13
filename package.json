@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "@tensorflow/tfjs": "^0.12.5",
+    "@tensorflow/tfjs-node": "^0.1.17",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "bootstrap": "^3.3.7",

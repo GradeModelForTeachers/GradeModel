@@ -1,5 +1,6 @@
 import path from 'path';
 import fs from 'fs';
+import * as tf from '@tensorflow/tfjs';
 import Essay from './essay';
 
 class EssayCollection {
@@ -30,11 +31,20 @@ class EssayCollection {
     return oneHotVector;
   }
 
+  vectorizeCollection() {
+    const combinedText = this.essays.reduce((text, essay) => text.concat(essay.essayText.split(' ')), []);
+    const vectors = combinedText.map(word => this.buildOneHotVector(word));
+    return tf.tensor2d(vectors);
+  }
+
   constructor(directory) {
     this.directory = directory;
     this.essays = this.storeEssays();
+    // map of unique words to number of occurrences in essay collection
     this.wordFrequencies = this.buildWordFrequencies();
+    // array of all unique words in entire essay collection
     this.corpus = Object.keys(this.wordFrequencies);
+    this.features = this.vectorizeCollection();
   }
 }
 
