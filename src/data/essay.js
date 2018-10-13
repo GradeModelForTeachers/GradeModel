@@ -9,7 +9,7 @@ class Essay {
   buildBagOfWords() {
     // count words in essay text
     const words = this.essayText.split(' ').reduce((count, word) => {
-      // eslint-disable-next-line no-param-reassign no-prototype-builtins
+      // eslint-disable-next-line no-param-reassign,no-prototype-builtins
       count[word] = count.hasOwnProperty(word) ? count[word] + 1 : 1;
       return count;
     }, {});

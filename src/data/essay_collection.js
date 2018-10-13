@@ -17,6 +17,7 @@ class EssayCollection {
   buildWordFrequencies() {
     return this.essays.reduce((wordFrequencies, essay) => {
       Object.keys(essay.bagOfWords).forEach((word) => {
+        // eslint-disable-next-line no-param-reassign,no-prototype-builtins
         wordFrequencies[word] = wordFrequencies.hasOwnProperty(word)
           ? wordFrequencies[word] + essay.bagOfWords[word]
           : essay.bagOfWords[word];

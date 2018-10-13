@@ -1,5 +1,5 @@
-import EssayCollection from '../../data/essay_collection';
 import * as tf from '@tensorflow/tfjs';
+import EssayCollection from '../../data/essay_collection';
 
 const directory = 'src/data/sample_essay_collection';
 const essayCollection = EssayCollection.fromDirectory(directory);

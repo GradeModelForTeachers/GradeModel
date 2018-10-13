@@ -1,4 +1,4 @@
-import Essay from '../../data/essay.js';
+import Essay from '../../data/essay';
 
 const sampleEssayPath = 'src/data/sample_essay_collection/';
 const sampleEssayFilename = 'sample_essay.json';
