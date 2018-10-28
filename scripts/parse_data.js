@@ -1,17 +1,18 @@
 const fs = require('fs');
 const fse = require('fs-extra');
+const glob = require("glob");
 
 const ESSAY_ID_INDEX = 0
 const ESSAY_INDEX = 2
 const ESSAY_SCORE_INDEX = 6
 
-// console.log('* deleting any previous temp directories...');
-// fs.readdirSync('./data', function(err, files){
-//     if(err) console.error(err);
-//     console.log(files);
-//     files.filter(name => name.startsWith('output')).forEach(fse.removeSync);
-// });
-// console.log('*** done deleting.');
+console.log('* deleting any previous temp directories...');
+oldTempDirs = glob.glob("./data/output*", function(err, files) {
+    if (err) throw err;
+    console.log(`Deleting the old temp files: ${files}`);
+    files.forEach(file => fse.removeSync(file));
+});
+console.log('*** done deleting.');
 
 console.log('* creating a temp directory...');
 tempDir = fs.mkdtempSync('./data/output');
