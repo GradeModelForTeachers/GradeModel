@@ -9,7 +9,7 @@
     "test": "jest; npm run lint",
     "test:watch": "npm run test -- --watch",
     "lint": "yarn eslint && yarn stylelint 'style/*.css --fix'",
-    "eslint": "eslint --ext .js,.jsx --fix ."
+    "eslint": "eslint --ext .js,.jsx --fix src/"
   },
   "jest": {
     "verbose": true,
