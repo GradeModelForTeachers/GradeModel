@@ -1,15 +1,15 @@
 {
-  "name": "redux-simple-starter",
+  "name": "grade-model",
   "version": "1.0.0",
-  "description": "Simple starter package for Redux with React and Babel support",
+  "description": "GradeModel is an open source tool designed to make grading easier for writing teachers.",
   "main": "index.js",
-  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "repository": "git@github.com:GradeModelForTeachers/GradeModel.git",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "test": "jest; npm run lint",
-    "test:watch": "npm run test -- --watch",
+    "eslint": "eslint --ext .js,.jsx --fix src/",
     "lint": "yarn eslint && yarn stylelint 'style/*.css --fix'",
-    "eslint": "eslint --ext .js,.jsx --fix src/"
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "test": "jest && yarn lint",
+    "test:watch": "jest --watch && yarn lint"
   },
   "jest": {
     "verbose": true,
@@ -18,7 +18,12 @@
       "\\.(css|less|sass|scss)$": "<rootDir>/config/css_stub.js"
     }
   },
-  "author": "",
+  "contributors": [
+    {"name": "Will Devon Sand", "url": "https://github.com/willds40"},
+    {"name": "Angelica Perez", "url": "https://github.com/angelicaperez37"},
+    {"name": "Karan Krishnani", "url": "https://github.com/ksk385"},
+    {"name": "Avalon McRae", "url": "https://github.com/avmcrae"}
+  ],
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
