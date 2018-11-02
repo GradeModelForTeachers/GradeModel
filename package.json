@@ -15,7 +15,7 @@
     "verbose": true,
     "testURL": "http://localhost/",
     "moduleNameMapper": {
-      "\\.(css|less|sass|scss)$": "<rootDir>/config/css_stub.js"
+      "\\.(css|less|sass|scss)$": "<rootDir>/ui/config/css_stub.js"
     }
   },
   "contributors": [

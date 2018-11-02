@@ -1,6 +1,6 @@
 import Essay from '../../data/essay';
 
-const sampleEssayPath = 'src/data/sample_essay_collection/';
+const sampleEssayPath = 'data/data/sample_essay_collection/';
 const sampleEssayFilename = 'sample_essay.json';
 
 test('should build bag of words with correct counts', () => {
