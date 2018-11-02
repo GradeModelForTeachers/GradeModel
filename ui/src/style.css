@@ -1,0 +1,29 @@
+@import 'components/Essay/EssayComments/comment_card.css';
+@import 'components/Essay/essay.css';
+@import 'components/Essay/EssayComments/comment_dropdown.css';
+@import 'components/Essay/EssayComments/comment_text_box.css';
+@import 'components/HomePage/homepage.css';
+@import 'components/Rubric/rubric_section.css';
+@import 'components/Rubric/rubric.css';
+@import 'components/Summary/summary.css';
+@import 'components/Essay/EssayComments/comments.css';
+
+.body {
+  height: 100%;
+  background-color: lightGrey;
+  margin: 0;
+}
+
+.html {
+  height: 100%;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+.Thesis-highlighter {
+  background-color: #9400d3;
+}
+
+.Argument-highlighter {
+  background-color: orange;
+}

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import RubricSection from '../components/rubric_section';
-import { fetchRubric } from '../actions/index';
-import getSectionScores from '../utils/rubric_scores_helper';
+import RubricSection from './rubric_section';
+import { fetchRubric } from './rubricReducer';
+import getSectionScores from '../../utils/rubric_scores_helper';
 
 class RubricScores extends Component {
   componentDidMount() {

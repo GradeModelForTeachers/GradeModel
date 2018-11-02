@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Essay from '../containers/essay';
-import Rubric from './rubric';
-import Comments from '../containers/comments';
-import Summary from '../containers/summary';
-import '../styles/homepage.css';
+import Essay from '../Essay/essay';
+import Rubric from '../Rubric/rubric';
+import Comments from '../Essay/EssayComments/comments';
+import Summary from '../Summary/summary';
+import './homepage.css';
 
 class Homepage extends Component {
   constructor() {

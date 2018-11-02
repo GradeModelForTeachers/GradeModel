@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchEssay } from '../actions/index';
-import '../styles/essay.css';
+import { fetchEssay } from './essayReducer';
+import './essay.css';
 
 export class Essay extends Component {
   componentDidMount() {

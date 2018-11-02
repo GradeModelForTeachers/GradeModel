@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchSummary } from '../actions/index';
-import '../styles/summary.css';
+import { fetchSummary } from './summaryReducer';
+import './summary.css';
 
 export class Summary extends Component {
   componentDidMount() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { cleanup } from 'react-testing-library';
-import Summary from '../../containers/summary';
+import Summary from '../../components/Summary/summary';
 import renderWithRedux from '../test_helper';
 import mockSummary from '../mock_data/summary_mock';
 

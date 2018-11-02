@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import CommentCard from '../components/comment_card';
-import { fetchComments } from '../actions/index';
-import '../styles/comments.css';
+import CommentCard from './comment_card';
+import { fetchComments } from './commentsReducer';
+import './comments.css';
 
 const NUMBEROFCOMMENTSALLOWED = 6;
 const commentTypleCollection = ['Thesis', 'Thesis', 'Argument'];

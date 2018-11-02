@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import reduxPromise from 'redux-promise';
-import Homepage from './components/homepage';
-import reducers from './reducers';
+import Homepage from './components/HomePage/homepage';
+import reducers from './indexReducer';
 
 const createStoreWithMiddleware = applyMiddleware(reduxPromise)(createStore);
 const store = createStoreWithMiddleware(reducers);

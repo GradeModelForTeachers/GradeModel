@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import '../styles/rubric_section.css';
+import './rubric_section.css';
 
 export default class RubricSection extends Component {
   constructor() {

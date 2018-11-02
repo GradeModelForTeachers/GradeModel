@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../styles/comment_dropdown.css';
+import './comment_dropdown.css';
 
 const CommentDropDown = (props => (
   <select
