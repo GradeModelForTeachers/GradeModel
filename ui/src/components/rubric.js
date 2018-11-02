@@ -45,10 +45,10 @@ export default class Rubric extends Component {
 
   render() {
     return (
-      <div className="rubric-container">
-        <Sticky top={0} innerZ={0}>
-          <span className="rubric-hovering-note col-md-12">*Hover Over Rubric For More Detail Or To Change Score </span>
-          <table className="col-md-12 rubric">
+      <div className="rubric">
+        <Sticky top={0} innerZ={0} bottomBoundary="essay-box">
+          <span className="rubric-hovering-note">*Hover Over Rubric For More Detail Or To Change Score </span>
+          <table className="rubric">
             <tr>
               <td className="rubric-title Thesis-section">THESIS</td>
               <td className="rubric-title Argument-section">ASSERTIONS</td>

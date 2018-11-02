@@ -73,7 +73,7 @@ export class Comments extends Component {
       : this.props.listOfComments.map(comment => comment.commentSuggestions);
     return (commentTexts === null ? null
       : (
-        <div className="comments col-md-3">
+        <div className="comments">
           {this.state.commentKeys.includes(1)
             ? (
               <CommentCard
@@ -141,7 +141,7 @@ export class Comments extends Component {
               />
             ) : null
       }
-          <span className="add-comment col-md-6">
+          <span className="add-comment">
             <button
               disabled={this.state.buttonDisabled}
               onClick={this.handleAddComment.bind(this, this.state.commentNumberToAdd)}

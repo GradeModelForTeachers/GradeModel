@@ -27,20 +27,20 @@ class Homepage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="PageWrapper">
         <Rubric />
         {this.state.open === false
           ? (
-            <span className="add-comment col-md-7 ">
+            <span className="add-comment">
               <button onClick={this.onToggleSummary} className="summary-button">
-View Summary
+                View Summary
               </button>
             </span>
           )
           : (
-            <span className="add-comment col-md-7 ">
+            <span className="add-comment">
               <button onClick={this.onToggleSummary} className="summary-button">
-Close Summary
+                Close Summary
               </button>
             </span>
           )
@@ -48,9 +48,11 @@ Close Summary
         {this.state.open === false ? null
           : <Summary />
         }
-        <Essay />
-        <Comments />
-        <div className="submit-essay col-md-8">
+        <div className="main-content">
+            <Essay />
+            <Comments />
+        </div>
+        <div className="submit-essay">
           <button onClick={this.onSubmitGrade} className="submit-button">
 Submit Grade
           </button>

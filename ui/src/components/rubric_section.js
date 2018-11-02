@@ -57,7 +57,7 @@ export default class RubricSection extends Component {
   render() {
     return (
       <div className="rubric-container">
-        <table className="col-md-12 rubric">
+        <table className="rubric">
           <tr>
             {this.displaySectionBoxesAndInputs()}
           </tr>

@@ -12,7 +12,7 @@ export function fetchEssay() {
   return {
     type: FETCH_ESSAY,
     payload: {
-      data: { ...mockEssay },
+      data: mockEssay,
     },
   };
 }

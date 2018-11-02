@@ -1,6 +1,17 @@
+.PageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  width: 90%;
+}
+
 .add-comment {
   display: flex;
-  float: right;
 }
 .summary-button {
   margin-bottom: 20px;
@@ -9,9 +20,7 @@
   font-size: 30px;
   color: #fff;
 }
-.submit-essay {
-  float: right;
-}
+
 .submit-button {
   margin-bottom: 20px;
   padding-right: 10px;

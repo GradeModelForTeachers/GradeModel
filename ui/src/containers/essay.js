@@ -11,7 +11,7 @@ export class Essay extends Component {
 
   render() {
     return (
-      <div className="col-md-9 essay">
+      <div className="essay-box">
         <h2 data-testid="essay_title" className="essay-title">
           {this.props.essay.essayTitle}
         </h2>
@@ -24,15 +24,8 @@ export class Essay extends Component {
 Essay.propTypes = {
   fetchEssay: PropTypes.func.isRequired,
   essay: PropTypes.object.isRequired,
-  essayTitle: PropTypes.string,
 };
 
-Essay.defaultProps = {
-  essayTitle: '',
-};
-
-function mapStateToProps({ essay }) {
-  return { essay };
-}
+const mapStateToProps = ({ essay }) => ({ essay });
 
 export default connect(mapStateToProps, { fetchEssay })(Essay);
