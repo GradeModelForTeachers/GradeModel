@@ -19,10 +19,22 @@
     }
   },
   "contributors": [
-    {"name": "Will Devon Sand", "url": "https://github.com/willds40"},
-    {"name": "Angelica Perez", "url": "https://github.com/angelicaperez37"},
-    {"name": "Karan Krishnani", "url": "https://github.com/ksk385"},
-    {"name": "Avalon McRae", "url": "https://github.com/avmcrae"}
+    {
+      "name": "Will Devon Sand",
+      "url": "https://github.com/willds40"
+    },
+    {
+      "name": "Angelica Perez",
+      "url": "https://github.com/angelicaperez37"
+    },
+    {
+      "name": "Karan Krishnani",
+      "url": "https://github.com/ksk385"
+    },
+    {
+      "name": "Avalon McRae",
+      "url": "https://github.com/avmcrae"
+    }
   ],
   "license": "MIT",
   "devDependencies": {
@@ -38,12 +50,9 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
-    "expect": "^21.2.1",
-    "file-loader": "^1.1.11",
     "fs": "0.0.1-security",
     "fs-extra": "^7.0.0",
     "glob": "^7.1.3",
-    "image-webpack-loader": "^4.3.1",
     "jest": "^23.1.0",
     "jest-dom": "^1.3.1",
     "stylelint": "^8.4.0",
@@ -59,15 +68,9 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "bootstrap": "^4.1.3",
-    "i": "^0.3.6",
-    "jquery": "^3.3.1",
-    "npm": "^6.2.0",
-    "optipng": "^1.1.0",
-    "popper.js": "^1.14.4",
     "prop-types": "^15.6.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-highlight-words": "^0.11.0",
     "react-redux": "^5.0.7",
     "react-stickynode": "^1.4.0",
     "react-testing-library": "^5.0.0",
