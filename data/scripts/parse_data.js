@@ -7,7 +7,7 @@ const ESSAY_INDEX = 2
 const ESSAY_SCORE_INDEX = 6
 
 console.log('* deleting any previous temp directories...');
-oldTempDirs = glob.glob("./data/output*", function(err, files) {
+oldTempDirs = glob.glob("./data/data/output*", function(err, files) {
     if (err) throw err;
     console.log(`Deleting the old temp files: ${files}`);
     files.forEach(file => fse.removeSync(file));
@@ -15,13 +15,13 @@ oldTempDirs = glob.glob("./data/output*", function(err, files) {
 console.log('*** done deleting.');
 
 console.log('* creating a temp directory...');
-tempDir = fs.mkdtempSync('./data/output');
+tempDir = fs.mkdtempSync('./data/data/output');
 console.log(tempDir);
 console.log('*** done creating.');
 
 console.log('* starting to parse data...');
 // For now just parsing the first 5 essays in the dataset
-fs.readFileSync('./data/training_set_rel3.tsv', 'utf8').toString()
+fs.readFileSync('./data/data/training_set_rel3.tsv', 'utf8').toString()
     .split('\n').slice(0, 5).forEach(function(line) {
     tokens = line.split('\t')
     essayData = {
