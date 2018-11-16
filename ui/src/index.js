@@ -7,7 +7,7 @@ import Homepage from './components/HomePage/homepage';
 import reducers from './indexReducer';
 
 const createStoreWithMiddleware = applyMiddleware(reduxPromise)(createStore);
-const store = createStoreWithMiddleware(reducers);
+const store = createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
   <Provider store={store}>
