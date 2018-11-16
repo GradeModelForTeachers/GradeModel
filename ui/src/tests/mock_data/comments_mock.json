@@ -1,31 +1,34 @@
 {
-   "comments": [
-     {
-     "commentText": "Great Imagary",
-     "commentType": "Thesis",
-     "commentSuggestions": [
-       "Needs more context",
-       "Almost there. You are missing one component",
-       "Is there a better piceve of evidence that you can select"
-     ]
-   },
-   {
-   "commentText": "Pefect",
-   "commentType": "Thesis",
-   "commentSuggestions": [
-     "Needs more context",
-     "Almost there. You are missing one component",
-     "Is there a better piceve of evidence that you can select"
-   ]
+  "comments": [
+    {
+      "id": "dddf588b-5452-4f83-ba16-f900780e5054",
+      "commentText": "Great Imagery",
+      "commentType": "Thesis",
+      "commentSuggestions": [
+        "Needs more context",
+        "Almost there. You are missing one component",
+        "Is there a better piece of evidence that you can select"
+      ]
     },
-   {
-   "commentText": "Does this go with the rest of the essay?",
-   "commentType": "Argument",
-   "commentSuggestions": [
-     "Needs more context",
-     "Almost there. You are missing one component",
-     "Is there a better piceve of evidence that you can select"
-   ]
+    {
+      "id": "eee946f3-21d0-45f1-b9e9-7704c7dd1a5f",
+      "commentText": "Perfect",
+      "commentType": "Thesis",
+      "commentSuggestions": [
+        "Needs more context",
+        "Almost there. You are missing one component",
+        "Is there a better piece of evidence that you can select"
+      ]
+    },
+    {
+      "id": "75ae4793-9606-4db0-9026-af05353be8f4",
+      "commentText": "Does this go with the rest of the essay?",
+      "commentType": "Argument",
+      "commentSuggestions": [
+        "Needs more context",
+        "Almost there. You are missing one component",
+        "Is there a better piece of evidence that you can select"
+      ]
     }
   ]
- }
+}

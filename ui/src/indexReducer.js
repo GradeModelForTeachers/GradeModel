@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
   essay: EssayReducer,
   rubric: RubricReducer,
   summary: SummaryReducer,
-  listOfComments: CommentsReducer,
+  essayComments: CommentsReducer,
 });
 
 export default rootReducer;

@@ -6,46 +6,31 @@ export default class CommentTextBox extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
-      inputValue: '',
+      commentText: '',
     };
   }
 
-  componentWillMount= () => {
-    this.setState({ inputValue: this.props.value });
-  }
-
-  componentDidUpdate = () => {
-    this.setState({ inputValue: this.props.value });
-  }
-
-  handleDeleteCommmentText() {
-    this.setState({
-      count: 0,
-      inputValue: '',
-    });
+  componentDidMount() {
+    this.setState({ commentText: this.props.initialValue });
   }
 
   handleTextChange(event) {
-    this.setState(prevState => ({
-      count: prevState.count + 1,
-    }));
-    this.setState({ inputValue: event.target.value });
+    this.setState({ commentText: event.target.value });
   }
 
   render() {
     return (
       <div>
-        <textarea data-testid="comment-text" value={this.state.inputValue} className="input-comment" onChange={this.handleTextChange.bind(this)} />
+        <textarea data-testid="comment-text" value={this.state.commentText} className="input-comment" onChange={this.handleTextChange.bind(this)} />
       </div>
     );
   }
 }
 
 CommentTextBox.propTypes = {
-  value: PropTypes.string,
+  initialValue: PropTypes.string,
 };
 
 CommentTextBox.defaultProps = {
-  value: '',
+  initialValue: '',
 };

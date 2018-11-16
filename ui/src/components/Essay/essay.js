@@ -23,7 +23,7 @@ export class Essay extends Component {
 
 Essay.propTypes = {
   fetchEssay: PropTypes.func.isRequired,
-  essay: PropTypes.object.isRequired,
+  essay: PropTypes.object,
 };
 
 const mapStateToProps = ({ essay }) => ({ essay });

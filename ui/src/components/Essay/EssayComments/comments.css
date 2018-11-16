@@ -1,28 +1,22 @@
 .comments {
-  margin-top: 10px;
   height: 100%;
-  margin-bottom: 10px;
 }
+
 .comment-type {
   padding-left: 20px;
   padding-top: 10px;
 }
-.comment-highlight {
-  display: inline-block;
-  list-style-type: none;
-  padding-right: 20px;
-  float: left;
-  width: 88px;
-  height: 64px;
+
+.add-comment-box {
+  padding: 1em;
+  border: 1px solid black;
 }
+
 .add-comment-button {
-  margin-top: 60px;
-  font-size: 22px;
   background-color: #5cb85c;
   color: #fff;
-  width: 300px;
 }
-.add-comment {
-  display: flex;
-  float: right;
+
+.add-comment-button.disabled {
+  background-color: gray;
 }

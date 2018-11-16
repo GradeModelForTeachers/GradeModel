@@ -7,30 +7,25 @@ import './comment_card.css';
 export default class CommentCard extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      commentValue: '',
-    };
+    this.state = { commentText: '' };
   }
 
   handleSelectionChange = (event) => {
-    this.setState({ commentValue: event.target.value });
-  }
+    this.setState({ commentText: event.target.value });
+  };
 
   render() {
     return (this.props.commentSuggestions === undefined ? null
       : (
-        <div className={`input-comment-container ${this.props.commentType}-section`}>
+        <div className={`input-comment-container ${this.props.commentType}-section`} data-testid={`comment-card-${this.props.commentId}`}>
           <button
             className="delete-comment-button"
             onClick={this.props.handleDeleteComment}
           >
-            {' '}
-Remove
+            Remove
           </button>
           <h4 data-testid="comment-type" className="comment-type">{this.props.commentType}</h4>
-          <CommentTextBox
-            value={this.state.commentValue === '' ? this.props.commentValue : this.state.commentValue}
-          />
+          <CommentTextBox initialValue={this.props.commentText} />
           <div>
             <CommentDropDown
               text=""
@@ -47,15 +42,17 @@ Remove
 }
 
 CommentCard.propTypes = {
+  commentId: PropTypes.string,
   commentSuggestions: PropTypes.array,
   handleDeleteComment: PropTypes.func,
-  commentValue: PropTypes.string,
+  commentText: PropTypes.string,
   commentType: PropTypes.string,
 };
 
 CommentCard.defaultProps = {
+  commentId: '',
   commentSuggestions: [],
   handleDeleteComment: () => {},
-  commentValue: '',
+  commentText: '',
   commentType: '',
 };

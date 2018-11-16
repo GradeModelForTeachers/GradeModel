@@ -5,14 +5,14 @@
   width: 100%;
 }
 
-.main-content {
-  display: flex;
+.main-page-content {
   width: 90%;
 }
 
-.add-comment {
+.essay-and-comments {
   display: flex;
 }
+
 .summary-button {
   margin-bottom: 20px;
   padding-right: 10px;

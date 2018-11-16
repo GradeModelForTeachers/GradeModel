@@ -31,30 +31,30 @@ class Homepage extends Component {
         <Rubric />
         {this.state.open === false
           ? (
-            <span className="add-comment">
+            <span>
               <button onClick={this.onToggleSummary} className="summary-button">
                 View Summary
               </button>
             </span>
           )
           : (
-            <span className="add-comment">
+            <span>
               <button onClick={this.onToggleSummary} className="summary-button">
                 Close Summary
               </button>
             </span>
           )
         }
-        {this.state.open === false ? null
-          : <Summary />
-        }
-        <div className="main-content">
-            <Essay />
-            <Comments />
+        <div className="main-page-content">
+            {this.state.open === false ? null : <Summary />}
+            <div className="essay-and-comments">
+                <Essay />
+                <Comments />
+            </div>
         </div>
         <div className="submit-essay">
           <button onClick={this.onSubmitGrade} className="submit-button">
-Submit Grade
+            Submit Grade
           </button>
         </div>
       </div>
