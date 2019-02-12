@@ -68,6 +68,7 @@
     "@tensorflow/tfjs-node": "^0.1.17",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
+    "googleapis": "^37.2.0",
     "prop-types": "^15.6.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
