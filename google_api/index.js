@@ -13,7 +13,7 @@ const TOKEN_PATH = 'token.json';
 fs.readFile('credentials.json', (err, content) => {
   if (err) return console.log('Error loading client secret file:', err);
   // Authorize a client with credentials, then call the Google Docs API.
-  authorize(JSON.parse(content), printDocTitle);
+  authorize(JSON.parse(content), getDocContent);
 });
 
 /**
@@ -71,13 +71,35 @@ function getNewToken(oAuth2Client, callback) {
  * https://docs.google.com/document/d/195j9eDD3ccgjQRttHhJPymLJUCOUjs-jmwTrekvdjFE/edit
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth 2.0 client.
  */
-function printDocTitle(auth) {
+function getDocContent(auth) {
   const docs = google.docs({version: 'v1', auth});
   docs.documents.get({
-    documentId: '195j9eDD3ccgjQRttHhJPymLJUCOUjs-jmwTrekvdjFE',
+    documentId: '1-5brj2WYWPe8DpEd_l2YuyA2dBWhermyh2SQvcNE8Uw',
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
-    console.log(`The title of the document is: ${res.data.title}`);
-
+    printDocTitle(res.data.title)
+    readText(res.data.body.content)
   });
+}
+
+function printDocTitle(title){
+  console.log(`The title of the document is: ${title}`);
+}
+
+function readText(content) {
+  let text = ''
+  let paragraphs = []
+  content.forEach((value)=>{
+    if(value.paragraph){
+      paragraphs = Object.values(value.paragraph.elements)
+      for(const value of paragraphs){
+        if(value.textRun){
+            text += value.textRun.content
+          }
+        }
+      }
+  })
+
+    console.log(text)
+    // return text
 }
